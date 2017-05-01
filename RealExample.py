@@ -1,4 +1,10 @@
 # Using Real Data Set
+
+# load package
+import pandas as pd
+from sklearn.cross_decomposition import PLSRegression
+from sklearn.preprocessing import scale
+
 # read in data set
 wine = pd.read_excel('wine.xlsx')
 wine.head()
@@ -7,7 +13,7 @@ wine_new = wine.copy()
 # normalize the data set
 n = len(wine.columns)
 for i in range(n):
-    wine_new.ix[:, i] = normal(wine.ix[:, i])
+    wine_new.ix[:, i] = scale(wine.ix[:, i])
 wine_new = np.array(np.matrix(wine_new))
 
 # separate the data set
