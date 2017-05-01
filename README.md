@@ -1,7 +1,7 @@
 # Partial-Least-Square-Regression
 
 Team Members: 
-Yao Song 
+Yao Song, 
 Yi Zhao
   
 1. Function "normal", standardize the data set to be 0 mean and 1 standard deviation
