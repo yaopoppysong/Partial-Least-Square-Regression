@@ -4,6 +4,7 @@
 import pandas as pd
 from sklearn.cross_decomposition import PLSRegression
 from sklearn.preprocessing import scale
+import matplotlib.pyplot as plt
 
 # read in data set
 wine = pd.read_excel('wine.xlsx')
@@ -22,6 +23,8 @@ wine_newY = wine_new[:, :3]
 wine_newX
 
 # Using partial least square function
+fit = PLS(wine_newX, wine_newY, wine_newX, 3, 1e-06)
+Y_pred = fit.pls_prediction(wine_newX, 3)
 Y_pred = pls_prediction(wine_newX, wine_newY, wine_newX, 3, 1e-06)
 np.sum((wine_newY-Y_pred)**2) # PRESS
 
@@ -32,4 +35,4 @@ Y_pred1 = pls1.predict(wine_newX)
 np.sum((wine_newY-Y_pred1)**2) # PRESS
 
 # Check the number of components by PRESS
-pls_ncomponents(wine_newX, wine_newY, 1e-06)
+fit.pls_ncomponents()
