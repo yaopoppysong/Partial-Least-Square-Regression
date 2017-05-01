@@ -4,6 +4,7 @@
 import numpy as np
 import numpy.random as npr
 from sklearn.preprocessing import scale
+import matplotlib.pyplot as plt
 
 # Set initial data set
 npr.seed(123)
@@ -21,7 +22,8 @@ Y_train = Y[:70, :]
 Y_test = Y[70:, :]
 
 # Using Partial Least Square Prediction Function
-Y_pred = pls_prediction(X_train, Y_train, X_test, 3, 1e-06)
+fit = PLS(X_train, Y_train, X_test, 3, 1e-06)
+Y_pred = fit.pls_prediction(X_test, 3)
 np.sum((Y_test-Y_pred)**2) # PRESS
 
 # Using Partial Least Square Package in Python
@@ -29,3 +31,6 @@ pls1 = PLSRegression(n_components = 3)
 pls1.fit(X_train, Y_train)
 Y_pred1 = pls1.predict(X_test)
 np.sum((Y_test-Y_pred1)**2) # PRESS
+
+# Obtain the right number of components
+fit.pls_ncomponents()
