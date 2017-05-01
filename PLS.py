@@ -11,7 +11,7 @@ class PLS:
     "Partial Least Square Regression Class"
     
     def __init__(self, X, Y, X_test,n_comp, tol):
-      """Function to initialize the parameters
+        """Function to initialize the parameters
         X is the matrix of independent variables
         Y is the matrix of dependent variables
         X_test is the matrix of dependent variables in testing data set
