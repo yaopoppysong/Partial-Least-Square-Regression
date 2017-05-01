@@ -4,8 +4,7 @@ import numpy.random as npr
 from numpy import linalg as LA
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import scale
-import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
+
 
 # PLS package
 class PLS:
