@@ -14,3 +14,9 @@ Functions
 Report
 "Partial Least Square.pdf" is the report to introduce the background of the partial least square and the package to obtain the weights, loadings of X, Y blocks, predict the dependent variables under certain convergence bound and number of components, and get the right number of components for the pls.
 
+Documentation Index:
+1. wine.xlsx: This is the real world dataset we used in this project
+2. pls_function & pls_vs_nipals & test-1 & update_rules: These are the pictures that we inserted in the project
+3. Partial Least Square Regression.ipynb: This is the Jupyter notebook which contains original write up and python testing and source code
+4. Partial+Least+Squares+Regression.pdf: This is the final project for sta 663 class in PDF version
+
