@@ -32,7 +32,5 @@ Y_pred1 = pls1.predict(X)
 print(Y_pred1)
 np.sum((Y-Y_pred1)**2)
 
-np.testing.assert_almost_equal(Y_pred, Y_pred1, decimal = 2) # Ture when the error bound is in 0.01
-
 # Check the Number of Components
 fit.pls_ncomponents()
