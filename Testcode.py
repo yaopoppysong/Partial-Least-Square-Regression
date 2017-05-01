@@ -7,6 +7,7 @@ import numpy as np
 import numpy.random as npr
 from sklearn.preprocessing import scale
 from sklearn.cross_decomposition import PLSRegression
+import PLS
 
 # Set initial data set
 npr.seed(123)
@@ -17,7 +18,8 @@ X = scale(X)
 Y = scale(Y)
 
 # obtain the prediction values from the Partial Least Square
-Y_pred = pls_prediction(X, Y, X, 3, 1e-06)
+fit = PLS(X, Y, X, 3, 1e-06)
+Y_pred = fit.pls_prediction(X, 3)
 Y_pred
 
 # Calculate the Prediction Residual Sum of Squares
@@ -33,4 +35,4 @@ np.sum((Y-Y_pred1)**2)
 np.testing.assert_almost_equal(Y_pred, Y_pred1, decimal = 2) # Ture when the error bound is in 0.01
 
 # Check the Number of Components
-pls_ncomponents(X, Y, 1e-06)
+fit.pls_ncomponents()
