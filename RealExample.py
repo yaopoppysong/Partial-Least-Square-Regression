@@ -25,7 +25,6 @@ wine_newX
 # Using partial least square function
 fit = PLS(wine_newX, wine_newY, wine_newX, 3, 1e-06)
 Y_pred = fit.pls_prediction(wine_newX, 3)
-Y_pred = pls_prediction(wine_newX, wine_newY, wine_newX, 3, 1e-06)
 np.sum((wine_newY-Y_pred)**2) # PRESS
 
 # Using Partial Least Square Package in Python
