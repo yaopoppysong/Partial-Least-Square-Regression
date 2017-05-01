@@ -8,6 +8,7 @@ import numpy.random as npr
 from sklearn.preprocessing import scale
 from sklearn.cross_decomposition import PLSRegression
 import PLS
+import matplotlib.pyplot as plt
 
 # Set initial data set
 npr.seed(123)
