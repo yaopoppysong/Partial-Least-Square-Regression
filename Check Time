@@ -37,8 +37,8 @@ def pls_fit(X, Y, n_comp, tol):
     k = Y.shape[1]
     
     # normalize the matrices X and Y
-    X = normal(X)
-    Y = normal(Y)
+    X = scale(X)
+    Y = scale(Y)
     
     # set initial value for the scores of Y and X
     E = X
@@ -109,7 +109,7 @@ def pls_prediction(X_train, Y_train, X_test, n_comp, tol):
     import numpy as np
     
     # normalize the matrices X and Y
-    X_test = normal(X_test)
+    X_test = scale(X_test)
     
     # get variable numbers of X and Y
     n = X_test.shape[0]
