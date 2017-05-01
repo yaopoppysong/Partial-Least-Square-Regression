@@ -13,8 +13,8 @@ npr.seed(123)
 X = np.random.normal(0, 1, (10, 3))
 Y = np.random.normal(0, 1, (10, 2))
 # normalize the matrices X and Y
-X = normal(X)
-Y = normal(Y)
+X = scale(X)
+Y = scale(Y)
 
 # Check time
 pr = cProfile.Profile()
