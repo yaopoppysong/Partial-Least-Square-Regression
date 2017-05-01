@@ -136,6 +136,7 @@ class PLS:
         
         # get variable numbers of X and Y
         m = self.X.shape[1]
+        X = self.X
     
         # create new variables
         PRESS = np.zeros(m)
